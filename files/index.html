@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PathShashtra — AI Student Success System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Path<span>Shashtra</span></div>
+  <a href="#waitlist" class="nav-cta">Join Waitlist</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg">
+    <div class="blob1"></div>
+    <div class="blob2"></div>
+    <div class="blob3"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="badge">
+      <span class="dot"></span>
+      Now accepting early access applications
+    </div>
+    <h1>
+      Your AI Mentor for<br/>
+      <span class="accent">Career.</span>
+      <span class="accent2"> Study.</span>
+      Code.
+    </h1>
+    <p class="hero-sub">
+      PathShashtra combines AI career guidance, smart study planning, and a coding tutor — built specifically for India's 38 million college students.
+    </p>
+
+    <div id="waitlist">
+      <div class="waitlist-form" id="formWrap">
+        <input type="email" id="emailInput" placeholder="Enter your college email" autocomplete="email"/>
+        <button class="btn-join" onclick="handleJoin()">Get Early Access →</button>
+      </div>
+      <div class="success-msg" id="successMsg"></div>
+      <p class="form-note">Free to join · No credit card · Be the first to know</p>
+    </div>
+
+    <div class="social-proof">
+      <div class="avatars">
+        <span>👨‍🎓</span>
+        <span>👩‍💻</span>
+        <span>👨‍🔬</span>
+        <span>👩‍🎨</span>
+      </div>
+      <p><strong>200+ students</strong> already on the waitlist</p>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>AI Career Guidance</span><span class="sep">✦</span>
+    <span>Smart Study Plans</span><span class="sep">✦</span>
+    <span>DSA Mastery</span><span class="sep">✦</span>
+    <span>Interview Prep</span><span class="sep">✦</span>
+    <span>Psychometric Tests</span><span class="sep">✦</span>
+    <span>Coding Tutor</span><span class="sep">✦</span>
+    <span>Career Roadmaps</span><span class="sep">✦</span>
+    <span>Weak Topic Targeting</span><span class="sep">✦</span>
+    <span>Mock Interviews</span><span class="sep">✦</span>
+    <span>AI Career Guidance</span><span class="sep">✦</span>
+    <span>Smart Study Plans</span><span class="sep">✦</span>
+    <span>DSA Mastery</span><span class="sep">✦</span>
+    <span>Interview Prep</span><span class="sep">✦</span>
+    <span>Psychometric Tests</span><span class="sep">✦</span>
+    <span>Coding Tutor</span><span class="sep">✦</span>
+    <span>Career Roadmaps</span><span class="sep">✦</span>
+    <span>Weak Topic Targeting</span><span class="sep">✦</span>
+    <span>Mock Interviews</span><span class="sep">✦</span>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="section">
+  <p class="section-label">The Problem</p>
+  <h2 class="section-title">Students are lost.<br/>The system isn't helping.</h2>
+  <p class="section-sub">India produces millions of graduates every year — but most enter the workforce without a clear direction, proper skills, or real confidence.</p>
+  <div class="pain-grid">
+    <div class="pain-card">
+      <span class="pain-icon">🧭</span>
+      <h3>No Career Direction</h3>
+      <p>65% of students have no clear idea what career to pursue — and nobody to ask.</p>
+    </div>
+    <div class="pain-card">
+      <span class="pain-icon">📅</span>
+      <h3>Unstructured Studying</h3>
+      <p>Without smart plans, students study inefficiently and burn out before exams.</p>
+    </div>
+    <div class="pain-card">
+      <span class="pain-icon">💻</span>
+      <h3>Coding Barriers</h3>
+      <p>Learning to code alone is hard. Debugging errors without guidance kills momentum.</p>
+    </div>
+    <div class="pain-card">
+      <span class="pain-icon">😰</span>
+      <h3>Zero Mentorship</h3>
+      <p>Most students can't afford a mentor or career counsellor. AI can change that.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<div class="features-wrap">
+  <div class="features-inner">
+    <p class="section-label">The Solution</p>
+    <h2 class="section-title" style="color:var(--paper)">Three tools.<br/>One platform.</h2>
+    <p class="section-sub">Everything a student needs to go from confused to career-ready.</p>
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="feature-num">01</div>
+        <div class="feature-pill">Career</div>
+        <h3>AI Career Guidance</h3>
+        <p>A psychometric engine that maps your strengths, interests, and aptitudes to the most suitable career paths — with actionable roadmaps.</p>
+        <ul class="feature-list">
+          <li>Personality & aptitude assessment</li>
+          <li>AI-generated career roadmaps</li>
+          <li>Salary & growth projections</li>
+          <li>Skills gap analysis</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-num">02</div>
+        <div class="feature-pill teal">Study</div>
+        <h3>Smart Study Planner</h3>
+        <p>Adaptive daily and weekly plans that evolve with your performance. Upload notes and get MCQs, summaries, and flashcards instantly.</p>
+        <ul class="feature-list">
+          <li>Dynamic schedule generation</li>
+          <li>Weak topic auto-detection</li>
+          <li>PDF → MCQ + summary AI</li>
+          <li>Spaced repetition engine</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-num">03</div>
+        <div class="feature-pill gold">Code</div>
+        <h3>AI Coding Tutor</h3>
+        <p>Debug code, master DSA step by step, and prepare for tech interviews with mock sessions and LeetCode-style challenges — all with AI feedback.</p>
+        <ul class="feature-list">
+          <li>Intelligent code debugger</li>
+          <li>Personalized DSA roadmap</li>
+          <li>LeetCode-style challenges</li>
+          <li>Mock interview simulator</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- MARKET STATS -->
+<section class="stats-section">
+  <p class="section-label">Market Opportunity</p>
+  <h2 class="section-title">Built for India's<br/>biggest generation.</h2>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-num">38M</div>
+      <div class="stat-label">College Students</div>
+      <div class="stat-desc">Active higher education learners across India right now</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">65%</div>
+      <div class="stat-label">Career Confused</div>
+      <div class="stat-desc">Students report having no clear plan for their future</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">$2.8B</div>
+      <div class="stat-label">EdTech Market</div>
+      <div class="stat-desc">Growing at 39% CAGR — and most students still underserved</div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<div class="roadmap-section">
+  <div class="roadmap-inner">
+    <p class="section-label">What's Coming</p>
+    <h2 class="section-title">Our journey starts now.</h2>
+    <p class="section-sub">We're building in public — here's the honest plan.</p>
+    <div class="timeline">
+      <div class="timeline-step">
+        <div class="step-dot s">Q2</div>
+        <div class="step-tag">Now · 2025</div>
+        <h4>Waitlist & Validation</h4>
+        <p>Collecting early signups. Running manual career assessments with 50 students.</p>
+      </div>
+      <div class="timeline-step">
+        <div class="step-dot t">Q3</div>
+        <div class="step-tag">Mid · 2025</div>
+        <h4>MVP Launch</h4>
+        <p>Career guidance quiz goes live. First 500 users get free Pro access for feedback.</p>
+      </div>
+      <div class="timeline-step">
+        <div class="step-dot g">Q4</div>
+        <div class="step-tag">Late · 2025</div>
+        <h4>Full Platform</h4>
+        <p>Study planner + AI coding tutor added. First college pilot partnerships.</p>
+      </div>
+      <div class="timeline-step">
+        <div class="step-dot d">2026</div>
+        <div class="step-tag">Next Year</div>
+        <h4>Scale & B2B</h4>
+        <p>Mobile apps, multi-language support, internship matching, college licensing.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <h2>Be the first to<br/>find your path.</h2>
+    <p>Join hundreds of students already waiting for PathShashtra. Early users get free Pro access and the chance to shape the product.</p>
+    <div class="waitlist-form" id="formWrap2" style="max-width:440px;margin:0 auto 1rem;">
+      <input type="email" id="emailInput2" placeholder="Your college email" autocomplete="email"/>
+      <button class="btn-join" onclick="handleJoin2()">Join Now →</button>
+    </div>
+    <div class="success-msg" id="successMsg2"></div>
+    <p class="form-note">Free forever for early users · Launching 2025</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">Path<span>Shashtra</span></div>
+  <p>Career · Study · Code — Powered by Intelligence</p>
+  <p>© 2025 PathShashtra. Made with ❤️ in India.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
